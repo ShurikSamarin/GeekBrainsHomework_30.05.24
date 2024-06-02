@@ -11,14 +11,12 @@ int priority(char c) {
         return 2;
     else if (strchr("<>=", c) != NULL)
         return 3;
-    else if (strchr("==!", c) != NULL)
-        return 4;
     else if (c == '&')
-        return 5;
-    else if (c == '^')
         return 6;
+    else if (c == '^')
+        return 5;
     else if (c == '|')
-        return 7;
+        return 4;
     else
         return -1;
 }
@@ -76,3 +74,4 @@ int main() {
     infixToPostfix(infix);
     return 0;
 }
+
